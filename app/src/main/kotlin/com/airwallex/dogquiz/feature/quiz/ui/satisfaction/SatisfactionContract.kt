@@ -23,18 +23,11 @@ import kotlinx.coroutines.flow.onStart
 import javax.inject.Inject
 
 class SatisfactionContract @Inject constructor(
-    // TODO, might need integration apollo data source
-    // TODO, or might need read data from local db/preferences/files
 ) : MviContract<Event, ViewState, ViewEffect, Result>() {
     /***********************************************
      *               event processing              *
      ***********************************************/
 
-    /**
-     * TODO, add more processing for different events
-     * 1. event could be a data class to carry parameters from UI
-     * 2. event could be an object, for example, trigger data loading
-     */
     override val eventProcessor: MviEventProcessor<Event, Result> = MviEventProcessor { event ->
         when (event) {
             is Event.LoadDataEvent -> processLoadData(event.dto)

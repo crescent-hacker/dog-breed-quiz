@@ -19,8 +19,8 @@ import com.airwallex.core.designsystem.theme.AirwallexColors.Neutrals700
 val AirwallexLightColorPalette = lightColors(
     primary = AirwallexColors.LightYear,
     primaryVariant = AirwallexColors.LightYear700,
-    secondary = AirwallexColors.SecondaryPink, //TODO, need to check use case in design
-    secondaryVariant = AirwallexColors.SecondaryPink300, //TODO, need to check use case in design
+    secondary = AirwallexColors.SecondaryPink,
+    secondaryVariant = AirwallexColors.SecondaryPink300,
     background = AirwallexColors.White,
     onBackground = AirwallexColors.Neutrals900,
     surface = AirwallexColors.Neutrals50,
@@ -163,11 +163,6 @@ val Colors.uncheckedBorderColor: Color
 
 val Colors.checkedBorderColor: Color
     get() = if (isLight) AirwallexColors.LightYear600 else AirwallexColors.LightYear300
-
-/**
- * colors for specific widgets
- * TODO, could create an extended colors pattern to include these kind of colors
- */
 
 
 /**

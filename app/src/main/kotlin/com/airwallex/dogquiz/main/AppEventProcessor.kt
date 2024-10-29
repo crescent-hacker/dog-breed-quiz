@@ -16,8 +16,6 @@ class AppEventProcessor @Inject constructor(
 
     /**
      * process app events
-     *
-     * TODO, use strategy pattern to create processor for each event type
      */
     override fun process(event: AppEvent): Unit = with(ctx) {
         when (event) {
