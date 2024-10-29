@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1030251495924",
+    "project_id": "fir-project-c0c0d",
+    "storage_bucket": "fir-project-c0c0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030251495924:android:7c56426ae3078bb0c279a1",
+        "android_client_info": {
+          "package_name": "com.airwallex.dogquiz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEuHia-JGa8MqTew8RYhJsjLkegozHSY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030251495924:android:9dba218493363ccbc279a1",
+        "android_client_info": {
+          "package_name": "com.airwallex.dogquiz.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEuHia-JGa8MqTew8RYhJsjLkegozHSY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
