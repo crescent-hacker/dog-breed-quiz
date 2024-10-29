@@ -5,11 +5,11 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.airwallex.core.MviEvent
-import com.airwallex.core.MviResult
-import com.airwallex.core.MviViewEffect
-import com.airwallex.core.MviViewModel
-import com.airwallex.core.MviViewState
+import com.airwallex.core.mvi.MviEvent
+import com.airwallex.core.mvi.MviResult
+import com.airwallex.core.mvi.MviViewEffect
+import com.airwallex.core.mvi.MviViewModel
+import com.airwallex.core.mvi.MviViewState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.Job

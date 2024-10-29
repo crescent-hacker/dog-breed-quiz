@@ -13,7 +13,7 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import com.airwallex.feature.shared.navigation.NavRoute
 import com.airwallex.feature.shared.ui.base.AbstractMviViewModel
-import com.airwallex.core.MviViewState
+import com.airwallex.core.mvi.MviViewState
 
 /**
  * remember MVI view state

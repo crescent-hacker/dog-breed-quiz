@@ -1,15 +1,15 @@
 package com.airwallex.dogquiz.feature.quiz.ui.satisfaction
 
-import com.airwallex.core.MviContract
-import com.airwallex.core.MviEffectMapper
-import com.airwallex.core.MviEvent
-import com.airwallex.core.MviEventProcessor
-import com.airwallex.core.MviResult
-import com.airwallex.core.MviStateReducer
-import com.airwallex.core.MviResult.ProcessStatus
-import com.airwallex.core.MviResult.ProcessStatus.*
-import com.airwallex.core.MviViewEffect
-import com.airwallex.core.MviViewState
+import com.airwallex.core.mvi.MviContract
+import com.airwallex.core.mvi.MviEffectMapper
+import com.airwallex.core.mvi.MviEvent
+import com.airwallex.core.mvi.MviEventProcessor
+import com.airwallex.core.mvi.MviResult
+import com.airwallex.core.mvi.MviStateReducer
+import com.airwallex.core.mvi.MviResult.ProcessStatus
+import com.airwallex.core.mvi.MviResult.ProcessStatus.*
+import com.airwallex.core.mvi.MviViewEffect
+import com.airwallex.core.mvi.MviViewState
 import com.airwallex.core.util.TextHolder
 import com.airwallex.core.util.toFlow
 import com.airwallex.dogquiz.feature.quiz.data.dto.SatisfactionNavDTO

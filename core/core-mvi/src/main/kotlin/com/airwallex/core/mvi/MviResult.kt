@@ -1,4 +1,4 @@
-package com.airwallex.core
+package com.airwallex.core.mvi
 
 /**
  * An [MviResult] is generated after [MviEventProcessor.process] processed a [MviEvent], its content could be:

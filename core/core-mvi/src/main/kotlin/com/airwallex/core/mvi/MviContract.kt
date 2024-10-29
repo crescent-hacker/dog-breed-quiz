@@ -1,4 +1,4 @@
-package com.airwallex.core
+package com.airwallex.core.mvi
 
 import kotlinx.coroutines.flow.FlowCollector
 

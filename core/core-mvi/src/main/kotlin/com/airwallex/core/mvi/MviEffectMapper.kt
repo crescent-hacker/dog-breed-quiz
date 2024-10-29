@@ -1,4 +1,4 @@
-package com.airwallex.core
+package com.airwallex.core.mvi
 
 fun interface MviEffectMapper<EventResult : MviResult, ViewEffect : MviViewEffect> {
     /**

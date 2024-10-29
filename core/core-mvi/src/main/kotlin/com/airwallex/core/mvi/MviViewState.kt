@@ -1,7 +1,7 @@
-package com.airwallex.core
+package com.airwallex.core.mvi
 
-import com.airwallex.core.MviViewState.Status
-import com.airwallex.core.MviViewState.Status.*
+import com.airwallex.core.mvi.MviViewState.Status
+import com.airwallex.core.mvi.MviViewState.Status.*
 import kotlin.reflect.KClass
 
 /**

@@ -1,4 +1,4 @@
-package com.airwallex.core
+package com.airwallex.core.mvi
 
 fun interface MviStateReducer<EventResult : MviResult, ViewState : MviViewState> {
     /**

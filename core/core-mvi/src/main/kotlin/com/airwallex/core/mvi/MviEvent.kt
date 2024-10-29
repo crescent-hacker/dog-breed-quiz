@@ -1,4 +1,4 @@
-package com.airwallex.core
+package com.airwallex.core.mvi
 
 /**
  * Represents the "Intent" in MVI architecture, using keyword "Event" here trying to avoid the confusion with Android

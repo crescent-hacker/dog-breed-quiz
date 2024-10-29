@@ -1,4 +1,4 @@
-package com.airwallex.core
+package com.airwallex.core.mvi
 
 /**
  * Represents UI side effect in MVI architecture, usually to trigger global or external UI change outside of
