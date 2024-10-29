@@ -1,0 +1,17 @@
+<resources>
+    <color name="com_airwallex_core_designsystem_surface">@color/com_airwallex_core_designsystem_neutrals_50</color>
+    <color name="com_airwallex_core_designsystem_surfaceVariant_light">@color/com_airwallex_core_designsystem_neutrals_100</color>
+    <color name="com_airwallex_core_designsystem_surfaceVariant_dark">@color/com_airwallex_core_designsystem_neutrals_700</color>
+
+    <color name="com_airwallex_core_designsystem_primary">@color/com_airwallex_core_designsystem_primary_purple_600</color>
+    <color name="com_airwallex_core_designsystem_primaryDark">@color/com_airwallex_core_designsystem_primary_purple_700</color>
+    <color name="com_airwallex_core_designsystem_textColorPrimary">@color/com_airwallex_core_designsystem_neutrals_900</color>
+    <color name="com_airwallex_core_designsystem_textColorSecondary">@color/com_airwallex_core_designsystem_neutrals_700</color>
+    <color name="com_airwallex_core_designsystem_buttonColorPrimary">@color/com_airwallex_core_designsystem_primary_purple_600</color>
+    <color name="com_airwallex_core_designsystem_buttonTextColorPrimary">@color/com_airwallex_core_designsystem_neutrals_10</color>
+    <color name="com_airwallex_core_designsystem_iconBackgroundSecondary">@color/com_airwallex_core_designsystem_primary_purple_100</color>
+    <color name="com_airwallex_core_designsystem_iconTintQuaternary">@color/com_airwallex_core_designsystem_primary_purple_600</color>
+
+    <color name="com_airwallex_core_designsystem_background">@color/com_airwallex_core_designsystem_neutrals_10</color>
+
+</resources>

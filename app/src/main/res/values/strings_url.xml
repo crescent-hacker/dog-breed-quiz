@@ -1,0 +1,3 @@
+<resources>
+    <string name="dog_ceo_api_host">https://dog.ceo/api/</string>
+</resources>

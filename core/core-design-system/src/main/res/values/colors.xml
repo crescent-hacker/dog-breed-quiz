@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="com_airwallex_core_designsystem_black">#FF000000</color>
+    <color name="com_airwallex_core_designsystem_white">#FFFFFFFF</color>
+    <color name="com_airwallex_core_designsystem_transparent">#00FFFFFF</color>
+    <color name="com_airwallex_core_designsystem_light_year_100">#FFFFDEA7</color>
+    <color name="com_airwallex_core_designsystem_light_year_200">#FFFFBB18</color>
+    <color name="com_airwallex_core_designsystem_neutrals_900">#FF141417</color>
+    <color name="com_airwallex_core_designsystem_neutrals_800">#FF24242A</color>
+    <color name="com_airwallex_core_designsystem_neutrals_700">#FF36363B</color>
+    <color name="com_airwallex_core_designsystem_neutrals_600">#FF47474C</color>
+    <color name="com_airwallex_core_designsystem_neutrals_500">#FF5F5F63</color>
+    <color name="com_airwallex_core_designsystem_neutrals_400">#FF77777B</color>
+    <color name="com_airwallex_core_designsystem_neutrals_300">#FFACACAE</color>
+    <color name="com_airwallex_core_designsystem_neutrals_200">#FFC6C6C8</color>
+    <color name="com_airwallex_core_designsystem_neutrals_100">#FFEDEDEE</color>
+    <color name="com_airwallex_core_designsystem_neutrals_50">#FFF6F6F7</color>
+    <color name="com_airwallex_core_designsystem_neutrals_10">#FFFDFDFD</color>
+    <color name="com_airwallex_core_designsystem_primary_purple_100">#FFE2DFFF</color>
+    <color name="com_airwallex_core_designsystem_primary_purple_600">#FF4941EC</color>
+    <color name="com_airwallex_core_designsystem_primary_purple_300">#FFA3A2FF</color>
+    <color name="com_airwallex_core_designsystem_primary_purple_400">#FF8482FF</color>
+    <color name="com_airwallex_core_designsystem_primary_purple_700">#FF2E1CD5</color>
+    <color name="com_airwallex_core_designsystem_primary_purple_50">#FFF2EFFF</color>
+</resources>

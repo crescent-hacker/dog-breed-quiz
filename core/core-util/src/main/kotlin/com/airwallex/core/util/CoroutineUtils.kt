@@ -1,0 +1,185 @@
+package com.airwallex.core.util
+
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.*
+
+fun <T> Flow<T>.log(message: String = "") =
+    this.map {
+        AppLogger.debug("$message - emits ${it.toString()}")
+        it
+    }
+
+fun <T> Flow<T>.catchAndContinue(
+    errorLogger: (RawError, TransformedError) -> Unit = { _, _ -> },
+    errorTransformer: (Throwable) -> Throwable = { it },
+    errorHandler: (Throwable) -> Result<T> = { e -> Result.failure(e) }
+): Flow<Result<T>> {
+    return flow {
+        this@catchAndContinue.collect { value ->
+            emit(Result.success(value))
+        }
+    }.catch { e ->
+        val transformedException = errorTransformer.invoke(e)
+        errorLogger.invoke(RawError(e), TransformedError(transformedException))
+        val result = errorHandler.invoke(transformedException)
+        emit(result)
+    }
+ }
+
+@JvmInline
+value class TransformedError(val throwable: Throwable)
+
+@JvmInline
+value class RawError(val throwable: Throwable)
+
+
+fun <T> Flow<T>.startWith(flow: Flow<T>) =
+    merge(flow, this)
+
+fun <T> Flow<T>.throttleLatest(delayMillis: Long): Flow<T> = this
+    .conflate()
+    .transform {
+        emit(it)
+        delay(delayMillis)
+    }
+
+fun <T> T.toFlow() = flowOf(this)
+
+fun <T> Flow<T>.mergeWith(vararg flow: Flow<T>) =
+    merge(this, *flow)
+
+fun <T, R> Flow<T>.combineWith(flow: Flow<R>) =
+    this.combine(flow) { a, b -> a to b }
+
+inline fun <T1, T2, T3, T4, T5, T6, R> combine(
+    flow: Flow<T1>,
+    flow2: Flow<T2>,
+    flow3: Flow<T3>,
+    flow4: Flow<T4>,
+    flow5: Flow<T5>,
+    flow6: Flow<T6>,
+    crossinline transform: suspend (T1, T2, T3, T4, T5, T6) -> R
+): Flow<R> {
+    return combine(flow, flow2, flow3, flow4, flow5, flow6) { args: Array<*> ->
+        @Suppress("UNCHECKED_CAST")
+        transform(
+            args[0] as T1,
+            args[1] as T2,
+            args[2] as T3,
+            args[3] as T4,
+            args[4] as T5,
+            args[5] as T6,
+        )
+    }
+}
+
+inline fun <T1, T2, T3, T4, T5, T6, T7, R> combine(
+    flow: Flow<T1>,
+    flow2: Flow<T2>,
+    flow3: Flow<T3>,
+    flow4: Flow<T4>,
+    flow5: Flow<T5>,
+    flow6: Flow<T6>,
+    flow7: Flow<T7>,
+    crossinline transform: suspend (T1, T2, T3, T4, T5, T6, T7) -> R
+): Flow<R> {
+    return combine(flow, flow2, flow3, flow4, flow5, flow6, flow7) { args: Array<*> ->
+        @Suppress("UNCHECKED_CAST")
+        transform(
+            args[0] as T1,
+            args[1] as T2,
+            args[2] as T3,
+            args[3] as T4,
+            args[4] as T5,
+            args[5] as T6,
+            args[6] as T7,
+        )
+    }
+}
+
+inline fun <T1, T2, T3, T4, T5, T6, T7, T8, R> combine(
+    flow: Flow<T1>,
+    flow2: Flow<T2>,
+    flow3: Flow<T3>,
+    flow4: Flow<T4>,
+    flow5: Flow<T5>,
+    flow6: Flow<T6>,
+    flow7: Flow<T7>,
+    flow8: Flow<T8>,
+    crossinline transform: suspend (T1, T2, T3, T4, T5, T6, T7, T8) -> R
+): Flow<R> {
+    return combine(flow, flow2, flow3, flow4, flow5, flow6, flow7, flow8) { args: Array<*> ->
+        @Suppress("UNCHECKED_CAST")
+        transform(
+            args[0] as T1,
+            args[1] as T2,
+            args[2] as T3,
+            args[3] as T4,
+            args[4] as T5,
+            args[5] as T6,
+            args[6] as T7,
+            args[7] as T8,
+        )
+    }
+}
+
+inline fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, R> combine(
+    flow: Flow<T1>,
+    flow2: Flow<T2>,
+    flow3: Flow<T3>,
+    flow4: Flow<T4>,
+    flow5: Flow<T5>,
+    flow6: Flow<T6>,
+    flow7: Flow<T7>,
+    flow8: Flow<T8>,
+    flow9: Flow<T9>,
+    crossinline transform: suspend (T1, T2, T3, T4, T5, T6, T7, T8, T9) -> R
+): Flow<R> {
+    return combine(flow, flow2, flow3, flow4, flow5, flow6, flow7, flow8, flow9) { args: Array<*> ->
+        @Suppress("UNCHECKED_CAST")
+        transform(
+            args[0] as T1,
+            args[1] as T2,
+            args[2] as T3,
+            args[3] as T4,
+            args[4] as T5,
+            args[5] as T6,
+            args[6] as T7,
+            args[7] as T8,
+            args[8] as T9,
+        )
+    }
+}
+
+inline fun <T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, R> combine(
+    flow: Flow<T1>,
+    flow2: Flow<T2>,
+    flow3: Flow<T3>,
+    flow4: Flow<T4>,
+    flow5: Flow<T5>,
+    flow6: Flow<T6>,
+    flow7: Flow<T7>,
+    flow8: Flow<T8>,
+    flow9: Flow<T9>,
+    flow10: Flow<T10>,
+    crossinline transform: suspend (T1, T2, T3, T4, T5, T6, T7, T8, T9, T10) -> R
+): Flow<R> {
+    return combine(flow, flow2, flow3, flow4, flow5, flow6, flow7, flow8, flow9, flow10) { args: Array<*> ->
+        @Suppress("UNCHECKED_CAST")
+        transform(
+            args[0] as T1,
+            args[1] as T2,
+            args[2] as T3,
+            args[3] as T4,
+            args[4] as T5,
+            args[5] as T6,
+            args[6] as T7,
+            args[7] as T8,
+            args[8] as T9,
+            args[9] as T10,
+        )
+    }
+}
+
+
+

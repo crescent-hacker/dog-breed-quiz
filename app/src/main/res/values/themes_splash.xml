@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.DogQuizAppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/com_airwallex_core_designsystem_light_year_200</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.AirwallexAppTheme</item>
+        <!-- Status bar and Nav bar configs -->
+        <item name="android:statusBarColor">@color/com_airwallex_core_designsystem_transparent</item>
+        <item name="android:navigationBarColor">@color/com_airwallex_core_designsystem_transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

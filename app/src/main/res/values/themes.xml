@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BaseAirwallexAppTheme" parent="Theme.MaterialComponents.NoActionBar" />
+    <style name="Theme.BaseAirwallexAppTheme.Light">
+        <item name="isLightTheme">true</item>
+    </style>
+    <style name="Theme.BaseAirwallexAppTheme.DayNight" parent="Theme.BaseAirwallexAppTheme.Light" />
+    <style name="Theme.AirwallexAppTheme" parent="Theme.BaseAirwallexAppTheme.DayNight" />
+</resources>

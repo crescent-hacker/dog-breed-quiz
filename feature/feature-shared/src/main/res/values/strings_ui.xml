@@ -1,0 +1,16 @@
+<resources>
+    <!-- generic error messages -->
+    <string name="com_airwallex_feature_shared_error_msg_generic_title">Sorry, we couldn\'t connect the dots. </string>
+    <string name="com_airwallex_feature_shared_error_msg_generic_copy">Please try again.</string>
+    <string name="com_airwallex_feature_shared_error_msg_generic">Sorry, something went wrong. Please try again.</string>
+
+    <!-- error state ui -->
+    <string name="com_airwallex_feature_shared_error_retry_button_text">Refresh</string>
+    <string name="com_airwallex_feature_shared_error_state_generic_title">Something went wrong</string>
+    <string name="com_airwallex_feature_shared_error_state_generic_subtitle">Please try again after a while.</string>
+
+
+    <!-- generic confirm modal button labels -->
+    <string name="com_airwallex_feature_shared_button_confirm">Confirm</string>
+    <string name="com_airwallex_feature_shared_button_cancel">Cancel</string>
+</resources>

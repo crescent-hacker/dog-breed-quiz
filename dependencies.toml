@@ -1,0 +1,192 @@
+# TODO, could use https://github.com/renovatebot/renovate in the future to auto update dependencies
+
+#######################################################################
+#                               versions                              #
+#######################################################################
+[versions]
+kotlin = "1.9.0"
+# unfortunately, for compose libs, due to version conflict, we need to use strictly version.
+# haven't found a way to specify strict version using version reference, so when update compose
+# version we also need to manually update those compose related lib
+compose = { strictly = "1.5.1" }
+composeMaterial = { strictly = "1.5.1" }
+composeKotlinCompiler = "1.5.2" # compatible versions - see https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+jvmTarget = "17"
+compileSdk = "34"
+minSdk = "24"
+targetSdk = "34"
+gradlePlugin = "8.2.0-rc01"
+ktlintPlugin = "10.0.0"
+depedencyCheck = "8.2.1"
+coil = "2.3.0"
+# dagger version need to match specific kotlin version,
+# see https://stackoverflow.com/questions/67744002/hilt-unsupported-metadata-version-in-kotlin
+dagger = "2.48"
+accompanist = "0.30.1"
+moshi = { strictly = "1.15.1" }
+
+#######################################################################
+#                               libraries                             #
+#######################################################################
+[libraries]
+# gradle plugins
+gradle-build-tools = { module = "com.android.tools.build:gradle", version.ref = "gradlePlugin" }
+gradle-api-build-tools = { module = "com.android.tools.build:gradle-api", version.ref = "gradlePlugin" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-stdlib-jdk8-plugin = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+# kotlin
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+# jvm
+jdk-desugar = { module = "com.android.tools:desugar_jdk_libs", version = "1.2.2" } # dont update to 2.0.0 util D8/R8 issue is fixed
+# dagger/hilt
+dagger-hilt-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
+dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
+javapoet = { module = "com.squareup:javapoet", version = { strictly = "1.13.0" } }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger" }
+dagger-hilt-test = { module = "com.google.dagger:hilt-android-testing", version.ref = "dagger" }
+
+# linting, coverage report, owasp dep checks
+ktlint-plugin = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlintPlugin" }
+owasp-dependency-check-plugin = { module = "org.owasp:dependency-check-gradle", version.ref = "depedencyCheck" }
+jacoco-plugin = "org.jacoco:org.jacoco.core:0.8.7"
+# compose
+compose-material3 = { module = "androidx.compose.material3:material3", version = "1.3.0" } # not used yet
+compose-material = { module = "androidx.compose.material:material", version.ref = "composeMaterial" }
+compose-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "composeMaterial" }
+#compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = { strictly = "compose" } }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-unit = { module = "androidx.compose.ui:ui-unit", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-constraintlayout = { module = "androidx.constraintlayout:constraintlayout-compose", version = "1.1.0-alpha09" }
+# compose accompanist - compose ui tool libs (https://github.com/google/accompanist)
+compose-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanist" }
+compose-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanist" }
+compose-accompanist-permission = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
+compose-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+compose-accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
+compose-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
+compose-accompanist-placeholder = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "accompanist" }
+compose-accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanist" }
+# compose debug
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+# compose other libs
+compose-lottie = { module = "com.airbnb.android:lottie-compose", version = "6.1.0" }
+compose-smartrefresh = { module = "io.github.shenzhen2017:compose-refreshlayout", version = "1.0.0" }
+# shimmer
+compose-shimmer = { module = "com.valentinilk.shimmer:compose-shimmer", version = "1.0.3" }
+# androidx
+androidx-core = { module = "androidx.core:core-ktx", version = "1.7.0" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.6.1" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.6.0-rc01" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version = "2.7.4" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version = "1.0.0" }
+androidx-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.5.1" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version = "2.6.0-alpha01" }
+androidx-window = { module = "androidx.window:window", version = "1.1.0-alpha03" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version = "1.0.0" }
+androidx-biometric = { module = "androidx.biometric:biometric-ktx", version = "1.2.0-alpha04" }
+androidx-browser = { module = "androidx.browser:browser", version = "1.5.0" }
+androidx-webkit = { module = "androidx.webkit:webkit", version = "1.6.1" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version = { strictly = "1.6.1" } }
+androidx-annotation = { module = "androidx.annotation:annotation", version = "1.5.0" }
+
+# firebase
+firebase-bom = "com.google.firebase:firebase-bom:30.3.1"
+firebase-core = { module = "com.google.firebase:firebase-core" }
+firebase-database = { module = "com.google.firebase:firebase-database" }
+firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
+firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebase-crashlytics-plugin = "com.google.firebase:firebase-crashlytics-gradle:3.0.2"
+# google-play services
+googleplay-asset-delivery = "com.google.android.play:asset-delivery:2.2.2"
+googleplay-asset-delivery-ktx = "com.google.android.play:asset-delivery-ktx:2.2.2"
+googleplay-feature-delivery = "com.google.android.play:feature-delivery:2.1.0"
+googleplay-feature-delivery-ktx = "com.google.android.play:feature-delivery-ktx:2.1.0"
+googleplay-review = "com.google.android.play:review:2.0.1"
+googleplay-review-ktx = "com.google.android.play:review-ktx:2.0.1"
+googleplay-app-update = "com.google.android.play:app-update:2.1.0"
+googleplay-app-update-ktx = "com.google.android.play:app-update-ktx:2.1.0"
+googleplay-services-auth = "com.google.android.gms:play-services-auth:20.7.0" # MFA autofill
+googleplay-services-auth-api-phone = "com.google.android.gms:play-services-auth-api-phone:18.0.1" # MFA autofill
+google-services-plugin = "com.google.gms:google-services:4.4.0"
+googleplay-services-ads-identifier = "com.google.android.gms:play-services-ads-identifier:18.0.1"
+
+# data (sharePref, room, etc)
+androidx-datastore-preferences = "androidx.datastore:datastore-preferences:1.1.1"
+kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0"
+# unit test
+junit = "junit:junit:4.13.2"
+mockk = "io.mockk:mockk:1.9.3"
+robolectric = "org.robolectric:robolectric:4.5.1"
+google-truth = "com.google.truth:truth:1.1.3"
+arch-core-testing = "androidx.arch.core:core-testing:2.2.0"
+test-core = "androidx.test:core:1.6.1"
+# android test
+test-ext-junit = "androidx.test.ext:junit:1.2.1"
+test-runner = "androidx.test:runner:1.6.2"
+test-rules = "androidx.test:rules:1.6.1"
+test-espresso-core = "androidx.test.espresso:espresso-core:3.6.1"
+test-espresso-contrib = "androidx.test.espresso:espresso-contrib:3.6.1"
+test-ext-truth = "androidx.test.ext:truth:1.6.0"
+compose-ui-test-junit = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
+# coil (image loading lib)
+coil-coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+# material ui 2 (for activity theme in traditional view system)
+material-ui = { module = "com.google.android.material:material", version = { strictly = "1.5.0" } }
+# okhttp/retrofit network
+retrofit = { module = "com.squareup.retrofit2:retrofit", version = { strictly = "2.9.0" } }
+okhttp-bom = { module = "com.squareup.okhttp3:okhttp-bom", version = { strictly = "4.10.0" } }
+okhttp-core = { module = "com.squareup.okhttp3:okhttp" }
+okhttp-urlconnection = { module = "com.squareup.okhttp3:okhttp-urlconnection" }
+okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor" }
+# moshi json parser
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
+moshi-adapter = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
+moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" } # used by kapt in the module build.gradle who needs codegen
+moshi-retrofit-converter = { module = "com.squareup.retrofit2:converter-moshi", version = { strictly = "2.9.0" } }
+# Misc
+google-guava = "com.google.guava:guava:31.1-android"
+
+#######################################################################
+#                               bundles                               #
+#######################################################################
+[bundles]
+compose = ["compose-material", "compose-material-icons-core", "compose-ui", "compose-ui-tooling-preview", "compose-foundation", "compose-constraintlayout"]
+composeAccompanist = ["compose-accompanist-pager", "compose-accompanist-pager-indicators", "compose-accompanist-permission", "compose-accompanist-systemuicontroller", "compose-accompanist-navigation-animation", "compose-accompanist-swiperefresh", "compose-accompanist-placeholder", "compose-accompanist-drawablepainter"]
+composeDebug = ["compose-ui-tooling", "compose-ui-test-manifest"]
+compose3rdPartyLibs = ["compose-lottie", "compose-shimmer", "compose-smartrefresh"]
+androidx = ["androidx-core", "androidx-lifecycle-runtime-ktx", "androidx-activity-compose", "androidx-navigation-compose", "androidx-window", "androidx-hilt-navigation-compose", "androidx-viewmodel-compose", "androidx-biometric", "androidx-lifecycle-runtime-compose", "androidx-browser", "androidx-appcompat", "androidx-annotation", "androidx-core-splashscreen", "androidx-webkit"]
+firebase = ["firebase-core", "firebase-database", "firebase-analytics-ktx", "firebase-crashlytics-ktx"]
+googleplay = ["googleplay-asset-delivery", "googleplay-asset-delivery-ktx", "googleplay-feature-delivery", "googleplay-feature-delivery-ktx", "googleplay-review", "googleplay-review-ktx", "googleplay-app-update", "googleplay-app-update-ktx", "googleplay-services-auth", "googleplay-services-auth-api-phone", "googleplay-services-ads-identifier"]
+test = ["junit", "mockk", "robolectric", "google-truth", "arch-core-testing", "test-core", "dagger-hilt-test"]
+androidTest = ["test-ext-junit", "test-runner", "test-rules", "test-espresso-core", "test-espresso-contrib", "test-ext-truth", "compose-ui-test-junit", "dagger-hilt-test"]
+coil = ["coil-coil", "coil-compose"]
+datastore = ["androidx-datastore-preferences", "kotlinx-serialization"]
+jvm = ["jdk_desugar"]
+okhttp = ["okhttp-core", "okhttp-urlconnection", "okhttp-logging-interceptor"]
+moshi = ["moshi", "moshi-kotlin", "moshi-adapter"]
+retrofit = ["retrofit", "moshi-retrofit-converter"]
+
+#######################################################################
+#                               plugins                               #
+#######################################################################
+[plugins]
+android-application = { id = "com.android.application", version.ref = "gradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "gradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+dagger-hilt = { id = "dagger.hilt.android.plugin", version.ref = "dagger" }
+gradle-versions = { id = "com.github.ben-manes.versions", version = "0.42.0" }
+ksp = { id = "com.google.devtools.ksp", version = "1.7.0-1.0.6" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "10.0.0" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics" }
+google-services = { id = "com.google.gms.google-services" }
+java-library = { id = "java-library" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+owasp-dependency-check = { id = "org.owasp.dependencycheck", version.ref = "depedencyCheck" }

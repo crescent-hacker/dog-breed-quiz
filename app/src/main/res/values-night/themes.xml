@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BaseAirwallexAppTheme.Dark">
+        <item name="isLightTheme">false</item>
+    </style>
+    <style name="Theme.BaseAirwallexAppTheme.DayNight" parent="Theme.BaseAirwallexAppTheme.Dark" />
+</resources>

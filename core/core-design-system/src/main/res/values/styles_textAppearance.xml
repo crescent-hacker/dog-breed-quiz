@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <style name="com_airwallex_core_designsystemTextAppearance" parent="TextAppearance.AppCompat" />
+
+    <style name="com_airwallex_core_designsystemTextAppearance.H1">
+        <item name="fontFamily">@font/com_airwallex_core_designsystem_dm_sans_bold</item>
+        <item name="android:fontFamily">@font/com_airwallex_core_designsystem_dm_sans_bold</item>
+        <item name="android:textSize">32sp</item> <!-- 32sp -->
+    </style>
+
+    <style name="com_airwallex_core_designsystemTextAppearance.H3">
+        <item name="fontFamily">@font/com_airwallex_core_designsystem_dm_sans_bold</item>
+        <item name="android:fontFamily">@font/com_airwallex_core_designsystem_dm_sans_bold</item>
+        <item name="android:textSize">28sp</item> <!-- 28sp -->
+    </style>
+
+    <style name="com_airwallex_core_designsystemTextAppearance.Subtitle4">
+        <item name="fontFamily">@font/com_airwallex_core_designsystem_roboto_regular</item>
+        <item name="android:fontFamily">@font/com_airwallex_core_designsystem_roboto_regular</item>
+        <item name="android:textSize">16sp</item> <!-- 16sp -->
+        <item name="android:letterSpacing">0.009375</item>
+    </style>
+
+    <style name="com_airwallex_core_designsystemTextAppearance.Subtitle3">
+        <item name="fontFamily">@font/com_airwallex_core_designsystem_roboto_medium</item>
+        <item name="android:fontFamily">@font/com_airwallex_core_designsystem_roboto_medium</item>
+        <item name="android:textSize">16sp</item> <!-- 16sp -->
+        <item name="android:letterSpacing">0.009375</item>
+    </style>
+
+</resources>
