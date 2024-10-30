@@ -46,8 +46,8 @@ Follow these steps to run the project locally:
 
 ### Prerequisites
 
-- **Android Studio** (version [specific version, if any])
-- **Java Development Kit (JDK)** (version [specific version, if any])
+- **Android Studio** (version Koala)
+- **Java Development Kit (JDK)**
 
 ### Development Setup
 - **Run init script**
