@@ -4,7 +4,6 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDeepLink
 import androidx.navigation.NavGraphBuilder
 import com.airwallex.core.util.EventBus
-import com.airwallex.dogquiz.feature.home.navigation.HomeNavGraph
 import com.airwallex.dogquiz.feature.home.navigation.HomeNavRoute
 import com.airwallex.dogquiz.feature.quiz.data.dto.SatisfactionNavDTO
 import com.airwallex.dogquiz.feature.quiz.ui.multiplechoice.MultipleChoiceScreen
@@ -18,8 +17,6 @@ import com.airwallex.feature.shared.navigation.NavigateBack
 import com.airwallex.feature.shared.navigation.ScreenNavAction
 import com.airwallex.feature.shared.navigation.composable
 import com.airwallex.feature.shared.navigation.getArgumentDataObject
-import com.airwallex.feature.shared.navigation.navigate
-import com.airwallex.feature.shared.navigation.popFullStack
 import com.airwallex.feature.shared.navigation.rememberOnNav
 import com.airwallex.feature.shared.navigation.toActualNavRouteWithDataObject
 import kotlinx.coroutines.CoroutineScope
