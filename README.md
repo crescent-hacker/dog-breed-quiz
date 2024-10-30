@@ -12,18 +12,18 @@ Dog Breed Quiz is an Android application designed to help dog lovers to learn br
 
 - Feature 1: Home, show greetings.
 <p>
-  <img src="screenshots/screenshot_1.png" alt="Home Screen" width="20%" />
-  <img src="screenshots/screenshot_5.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_1.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_5.png" alt="Home Screen" width="20%" />
 </p>
 
 - Feature 2: Quiz, show random a dog breed image and help user to identify what breed it is.
 <p>
-  <img src="screenshots/screenshot_2.png" alt="Home Screen" width="20%" />
-  <img src="screenshots/screenshot_3.png" alt="Home Screen" width="20%" />
-  <img src="screenshots/screenshot_4.png" alt="Home Screen" width="20%" />
-  <img src="screenshots/screenshot_6.png" alt="Home Screen" width="20%" />
-  <img src="screenshots/screenshot_7.png" alt="Home Screen" width="20%" />
-  <img src="screenshots/screenshot_8.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_2.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_3.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_4.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_6.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_7.png" alt="Home Screen" width="20%" />
+  <img src="screenshots/Screenshot_8.png" alt="Home Screen" width="20%" />
 </p>
 
 ## 🔧 Tech Stack
